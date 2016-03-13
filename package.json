@@ -1,0 +1,25 @@
+{
+  "name": "sql-debugger",
+  "version": "1.0.0",
+  "description": "SQL Debugger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlabouardy/sql-debugger.git"
+  },
+  "author": "mlabouardy <mohamed@labouardy.com> (http://labouardy.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlabouardy/sql-debugger/issues"
+  },
+  "homepage": "https://github.com/mlabouardy/sql-debugger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "mysql": "^2.10.2"
+  }
+}
