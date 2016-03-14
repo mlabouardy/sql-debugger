@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "homepage": "https://github.com/mlabouardy/sql-debugger",
+  "authors": [
+    "mlabouardy <mohamed.labouardy@gmail.com>"
+  ],
+  "description": "SQL Debugger Client",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.5.0",
+    "bootstrap-css": "~3.3.6",
+    "jquery": "~2.2.1",
+    "components-font-awesome": "~4.5.0",
+    "angular-ui-bootstrap": "~1.2.4",
+    "angular-bootstrap": "~1.2.4"
+  }
+}

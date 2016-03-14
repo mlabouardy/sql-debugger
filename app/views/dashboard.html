@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><i class="fa fa-database"></i> New Connection</div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label>Connection</label>
+            <select class="form-control" ng-model="config.connection">
+              <option ng-repeat="engine in engines" value="{{engine}}">{{engine}}</option>
+            </select><br/>
+            <label>Hostname</label>
+            <input type="text" class="form-control" ng-model="config.hostname"/><br/>
+            <label>Port</label>
+            <input type="number" class="form-control" ng-model="config.port"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Username</label>
+            <input type="text" class="form-control" ng-model="config.username"/><br/>
+            <label>Password</label>
+            <input type="password" class="form-control" ng-model="config.password"/><br/>
+            <label></label>
+            <a class="btn btn-success btn-block" ng-click="create(config)"><i class="fa fa-check-circle"></i> Create</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><i class="fa fa-database"></i> Connections</div>
+      <div class="panel-body">
+        <div class="alert alert-success" ng-show="connections.length<=0">
+          Empty connections list
+        </div>
+        <table class="table table-hover" ng-show="connections.length">
+          <thead>
+            <tr>
+              <th>Connection</th>
+              <th>Type</th>
+              <th style="text-align:center">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="con in connections track by $index">
+              <td>{{con.hostname}}:{{con.port}}</td>
+              <td>
+                <span class="btn btn-success btn-xs"><i class="fa fa-database"></i> {{con.connection}}</span>
+              </td>
+              <td style="text-align:center">
+                <span class="btn btn-danger btn-xs" ng-click="delete($index)"><i class="fa fa-trash-o"></i> Delete</span>
+                <span class="btn btn-primary btn-xs" ng-click="view($index)"><i class="fa fa-table"></i> View</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
